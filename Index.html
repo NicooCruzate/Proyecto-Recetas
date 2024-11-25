@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores & Recetas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🍴 Sabores & Recetas</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#recipes">Recetas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Descubre los mejores sabores</h1>
+        <p>Deliciosas recetas y comidas listas para disfrutar.</p>
+        <a href="#recipes" class="btn">Ver Recetas</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos amantes de la cocina, dedicados a ofrecer las mejores recetas y comidas gourmet para tus momentos especiales.</p>
+    </section>
+
+    <section id="recipes" class="recipes">
+        <h2>Nuestras Recetas</h2>
+        <div class="recipe-grid">
+            <div class="recipe-item">
+                <img src="https://via.placeholder.com/150" alt="Receta 1">
+                <h3>Pizza Italiana</h3>
+            </div>
+            <div class="recipe-item">
+                <img src="https://via.placeholder.com/150" alt="Receta 2">
+                <h3>Ensalada César</h3>
+            </div>
+            <div class="recipe-item">
+                <img src="https://via.placeholder.com/150" alt="Receta 3">
+                <h3>Pastel de Chocolate</h3>
+            </div>
+        </div>
+    </section>
+    <section id="carrusel-recetas" class="carrusel-contenedor">
+        <h2>Nuestras Recetas Destacadas</h2>
+        <div class="carrusel">
+            <!-- Primera receta -->
+            <div class="carrusel-item">
+                <img src="paella.jpg" alt="Paella de Mariscos">
+                <p>Paella de Mariscos</p>
+                <a href="receta1.html" class="btn-ver-receta">Ver Receta</a>
+            </div>
+    
+            <!-- Segunda receta -->
+            <div class="carrusel-item">
+                <img src="hamburguesa.jpg" alt="Hamburguesa Clásica">
+                <p>Hamburguesa Clásica</p>
+                <a href="receta2.html" class="btn-ver-receta">Ver Receta</a>
+            </div>
+    
+            <!-- Tercera receta -->
+            <div class="carrusel-item">
+                <img src="tacos.jpg" alt="Tacos Mexicanos">
+                <p>Tacos Mexicanos</p>
+                <a href="receta3.html" class="btn-ver-receta">Ver Receta</a>
+            </div>
+    
+            <!-- Cuarta receta -->
+            <div class="carrusel-item">
+                <img src="ensalada.jpg" alt="Ensalada César">
+                <p>Ensalada César</p>
+                <a href="receta4.html" class="btn-ver-receta">Ver Receta</a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="contact" class="contact">
+        <h2>Contáctanos</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sabores & Recetas. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const recetas = {
+            "Pizza Italiana": "Una pizza clásica con masa crujiente, salsa de tomate casera, queso mozzarella y albahaca fresca.",
+            "Hamburguesa Clásica": "Jugosa hamburguesa con carne de res, queso cheddar, lechuga, tomate y salsa especial.",
+            "Tacos Mexicanos": "Tortillas suaves rellenas de carne, guacamole, salsa picante y cilantro fresco.",
+            "Ensalada César": "Fresca mezcla de lechuga romana, crutones, queso parmesano y aderezo César casero."
+        };
+    
+        function mostrarReceta(nombre) {
+            const titulo = document.getElementById("receta-titulo");
+            const detalles = document.getElementById("receta-detalles");
+            const popup = document.getElementById("receta-popup");
+    
+            titulo.textContent = nombre;
+            detalles.textContent = recetas[nombre];
+            popup.classList.remove("oculto");
+        }
+    
+        function cerrarReceta() {
+            const popup = document.getElementById("receta-popup");
+            popup.classList.add("oculto");
+        }
+    </script>
+    
+</body>
+</html>
