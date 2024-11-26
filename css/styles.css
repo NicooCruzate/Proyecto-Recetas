@@ -45,7 +45,7 @@ header .logo {
 }
 
 .nav-links a:hover {
-    color: #fdd835;
+    color: #9c0740;
 }
 
 /* Hero Section */
@@ -84,13 +84,13 @@ header .logo {
 }
 
 .hero .btn:hover {
-    background-color: #ff6700;
+    background-color: #9c0740;
     color: white;
 }
 
 /* About Section */
 .about {
-    background: #fff5e6;
+    background: #ffe6e6;
     padding: 3rem 1rem;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -98,7 +98,7 @@ header .logo {
 
 .about h2 {
     font-size: 2.5rem;
-    color: #ff6700;
+    color: #9c0740;
     margin-bottom: 1rem;
 }
 
@@ -111,8 +111,8 @@ header .logo {
 
 /* Recipes Section */
 .recipes {
-    background: #f8b400;
-    color: white;
+    background: rgb(250, 153, 153);
+    color:  #9c0740;
     padding: 3rem 1rem;
     text-align: center;
 }
@@ -129,7 +129,7 @@ header .logo {
 }
 
 .recipe-item {
-    background: white;
+    background: #ffe6e6;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -148,7 +148,7 @@ header .logo {
     padding: 1rem;
     color: #333;
     text-transform: capitalize;
-    background: #fdd835;
+    background: #ffe6e6;
 }
 
 .recipe-item img:hover {
@@ -164,7 +164,7 @@ header .logo {
 /* Estilo para las imágenes de las recetas */
 .carrusel-contenedor {
     padding: 2rem;
-    background-color: #f9f9f9;
+    background: #ffe6e6;
     text-align: center;
 }
 
@@ -177,11 +177,10 @@ header .logo {
 
 .carrusel-item {
     flex: 0 0 250px; /* Ajusta el tamaño de cada imagen */
-    border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    background: white;
+    background: #ffe6e6;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
 }
@@ -197,7 +196,7 @@ header .logo {
     padding: 1rem;
     font-size: 1.2rem;
     color: #333;
-    background-color: #fdd835;
+    background: rgb(250, 153, 153);
     font-weight: bold;
 }
 
@@ -212,7 +211,7 @@ header .logo {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #ff6700;
+    background-color: #50042e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -221,9 +220,8 @@ header .logo {
 }
 
 .carrusel-item .btn-ver-receta:hover {
-    background-color: #fdd835;
+    background: rgb(250, 153, 153);
 }
-
 
 /* Estilos generales del botón */
 .btn {
@@ -260,13 +258,13 @@ header .logo {
 
 /* Contact Section */
 .contact {
-    background: #fff5e6;
+    background: #ffe6e6;
     padding: 3rem 1rem;
 }
 
 .contact h2 {
     font-size: 2.5rem;
-    color: #ff6700;
+    color: #50042e;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -293,7 +291,7 @@ header .logo {
 }
 
 .contact .btn {
-    background-color: #ff6700;
+    background-color: #50042e;
     color: white;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -361,7 +359,7 @@ footer {
 
 .hero .btn {
     padding: 10px 20px;
-    background-color: #ff6700;
+    background-color: #50042e;
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
