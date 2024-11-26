@@ -370,3 +370,21 @@ footer {
 .hero .btn:hover {
     background-color: #fdd835;
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
+
