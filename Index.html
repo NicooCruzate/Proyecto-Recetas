@@ -20,10 +20,17 @@
     </header>
 
     <section id="home" class="hero">
-        <h1>Descubre los mejores sabores</h1>
-        <p>Deliciosas recetas y comidas listas para disfrutar.</p>
-        <a href="#recipes" class="btn">Ver Recetas</a>
+        <div class="image-container">
+            <img src="pics/Principal.png" alt="Imagen Hero">
+        </div>
+        <div class="content">
+            <h1>Descubre los mejores sabores</h1>
+            <p>Deliciosas recetas y comidas listas para disfrutar.</p>
+            <a href="#recipes" class="btn">Ver Recetas</a>
+        </div>
     </section>
+    
+
 
     <section id="about" class="about">
         <h2>Sobre Nosotros</h2>
@@ -34,53 +41,64 @@
         <h2>Nuestras Recetas</h2>
         <div class="recipe-grid">
             <div class="recipe-item">
-                <img src="https://via.placeholder.com/150" alt="Receta 1">
-                <h3>Pizza Italiana</h3>
+                <a href="receta1.html">
+                    <img src="pics/receta1-img1.jpeg" alt="Paella de Mariscos">
+                    <h3>Paella de Mariscos</h3>
+                </a>
             </div>
             <div class="recipe-item">
-                <img src="https://via.placeholder.com/150" alt="Receta 2">
-                <h3>Ensalada César</h3>
+                <a href="receta2.html">
+                    <img src="pics/receta2-img1.jpeg" alt="Ñoquis Caseros">
+                    <h3>Ñoquis Caseros</h3>
+                </a>
             </div>
             <div class="recipe-item">
-                <img src="https://via.placeholder.com/150" alt="Receta 3">
-                <h3>Pastel de Chocolate</h3>
+                <a href="receta3.html">
+                    <img src="pics/receta3-img1.jpeg" alt="Tacos Mexicanos">
+                    <h3>Tacos Mexicanos</h3>
+                </a>
+            </div>
+            <div class="recipe-item">
+                <a href="receta4.html">
+                    <img src="pics/receta4-img1.jpeg" alt="Empanadas Argentinas">
+                    <h3>Empanadas Argentinas</h3>
+                </a>
             </div>
         </div>
     </section>
+
     <section id="carrusel-recetas" class="carrusel-contenedor">
         <h2>Nuestras Recetas Destacadas</h2>
         <div class="carrusel">
             <!-- Primera receta -->
             <div class="carrusel-item">
-                <img src="paella.jpg" alt="Paella de Mariscos">
+                <img src="pics/receta1-img2.jpeg" alt="Paella de Mariscos">
                 <p>Paella de Mariscos</p>
-                <a href="receta1.html" class="btn-ver-receta">Ver Receta</a>
+                <a href="receta1.html" class="btn">Ver Receta</a>
             </div>
-    
+
             <!-- Segunda receta -->
             <div class="carrusel-item">
-                <img src="hamburguesa.jpg" alt="Hamburguesa Clásica">
-                <p>Hamburguesa Clásica</p>
-                <a href="receta2.html" class="btn-ver-receta">Ver Receta</a>
+                <img src="pics/receta2-img2.jpeg" alt="Ñoquis Caseros">
+                <p>Ñoquis Caseros</p>
+                <a href="receta2.html" class="btn">Ver Receta</a>
             </div>
-    
+            
             <!-- Tercera receta -->
             <div class="carrusel-item">
-                <img src="tacos.jpg" alt="Tacos Mexicanos">
+                <img src="pics/receta3-img2.jpeg" alt="Tacos Mexicanos">
                 <p>Tacos Mexicanos</p>
-                <a href="receta3.html" class="btn-ver-receta">Ver Receta</a>
+                <a href="receta3.html" class="btn">Ver Receta</a>
             </div>
-    
+
             <!-- Cuarta receta -->
             <div class="carrusel-item">
-                <img src="ensalada.jpg" alt="Ensalada César">
-                <p>Ensalada César</p>
-                <a href="receta4.html" class="btn-ver-receta">Ver Receta</a>
+                <img src="pics/receta4-img2.jpeg" alt="Empanadas Argentinas">
+                <p>Empanadas Argentinas</p>
+                <a href="receta4.html" class="btn">Ver Receta</a>
             </div>
         </div>
     </section>
-    
-    
 
     <section id="contact" class="contact">
         <h2>Contáctanos</h2>
@@ -95,29 +113,5 @@
     <footer>
         <p>&copy; 2024 Sabores & Recetas. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        const recetas = {
-            "Pizza Italiana": "Una pizza clásica con masa crujiente, salsa de tomate casera, queso mozzarella y albahaca fresca.",
-            "Hamburguesa Clásica": "Jugosa hamburguesa con carne de res, queso cheddar, lechuga, tomate y salsa especial.",
-            "Tacos Mexicanos": "Tortillas suaves rellenas de carne, guacamole, salsa picante y cilantro fresco.",
-            "Ensalada César": "Fresca mezcla de lechuga romana, crutones, queso parmesano y aderezo César casero."
-        };
-    
-        function mostrarReceta(nombre) {
-            const titulo = document.getElementById("receta-titulo");
-            const detalles = document.getElementById("receta-detalles");
-            const popup = document.getElementById("receta-popup");
-    
-            titulo.textContent = nombre;
-            detalles.textContent = recetas[nombre];
-            popup.classList.remove("oculto");
-        }
-    
-        function cerrarReceta() {
-            const popup = document.getElementById("receta-popup");
-            popup.classList.add("oculto");
-        }
-    </script>
-    
 </body>
 </html>

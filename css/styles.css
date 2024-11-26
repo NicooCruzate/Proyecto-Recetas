@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #ff6700;
+    background: #9c0740;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -140,6 +140,7 @@ header .logo {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .recipe-item h3 {
@@ -150,9 +151,111 @@ header .logo {
     background: #fdd835;
 }
 
+.recipe-item img:hover {
+    transform: scale(1.05);
+}
+
 .recipe-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Carrusel Section */
+/* Estilo para las imágenes de las recetas */
+.carrusel-contenedor {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.carrusel {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carrusel-item {
+    flex: 0 0 250px; /* Ajusta el tamaño de cada imagen */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsionarse */
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.carrusel-item p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #fdd835;
+    font-weight: bold;
+}
+
+/* Efecto de hover para las imágenes */
+.carrusel-item:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el item */
+}
+
+/* Botón de ver receta */
+.carrusel-item .btn-ver-receta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.carrusel-item .btn-ver-receta:hover {
+    background-color: #fdd835;
+}
+
+
+/* Estilos generales del botón */
+.btn {
+    width: 200px;
+    height: 50px;
+    background-color: #4CAF50; /* Color de fondo inicial */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Efecto de cambio de color y resplandor al hacer hover */
+.btn:hover {
+    background-color: #008CBA; /* Cambia el color de fondo al pasar el cursor */
+    box-shadow: 0 0 15px 5px rgba(0, 140, 186, 0.7); /* Efecto resplandor */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* Efecto cuando el botón es presionado */
+.btn:active {
+    box-shadow: 0 0 20px 10px rgba(0, 140, 186, 1); /* Aumenta el brillo al hacer clic */
+    transform: scale(0.98); /* Hace que el botón se reduzca ligeramente */
 }
 
 /* Contact Section */
@@ -215,87 +318,57 @@ footer {
     color: white;
     font-size: 0.9rem;
 }
-/* Estilo del carrusel */
-.carrusel-contenedor {
-    padding: 2rem;
-    background-color: #f9f9f9;
-    text-align: center;
+/* Estilo para la sección hero */
+.hero {
+    position: relative;
+    height: 600px;
 }
 
-.carrusel {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding: 1rem 0;
-}
-
-.carrusel-item {
-    flex: 0 0 200px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    background: white;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.carrusel-item:hover {
-    transform: scale(1.05);
-}
-
-.carrusel-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.carrusel-item p {
-    margin: 0;
-    padding: 0.5rem;
-    font-size: 1rem;
-    color: #333;
-}
-
-/* Estilo del popup */
-.popup-receta {
-    position: fixed;
+.image-container {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: white;
+    overflow: hidden;
 }
 
-.popup-receta .contenido-receta {
-    background: white;
-    color: #333;
-    padding: 2rem;
-    border-radius: 10px;
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra la sección sin deformarse */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Hace que el contenido esté por encima de la imagen */
     text-align: center;
-    max-width: 500px;
-    width: 80%;
-}
-
-.popup-receta .cerrar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff3f81;
-    border: none;
     color: white;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
     font-size: 1.5rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.oculto {
-    display: none;
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+.hero .btn:hover {
+    background-color: #fdd835;
+}
